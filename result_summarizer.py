@@ -497,7 +497,7 @@ async def process_announcements():
                                     save_dataframe_images(standalone_df,rows_per_image=10,output_folder=output_folder,highlight_dict=highlight_columns)
                                     await send_images(output_folder)
                                 else:
-                                    print(f"{row["SLONGNAME"]} Standalone Financial Statement Not available or Not able to fetch.")
+                                    # print(f"{row["SLONGNAME"]} Standalone Financial Statement Not available or Not able to fetch.")
                                     await send_message_to_telegram(f"{row["SLONGNAME"]} Standalone Financial Statement Not available or Not able to fetch.")
 
                                 # Extract and parse the "data_consolidated" dictionary
@@ -530,7 +530,7 @@ async def process_announcements():
                                     save_dataframe_images(consolidated_df,rows_per_image=10,output_folder=output_folder,highlight_dict=highlight_columns)
                                     await send_images(output_folder)
                                 else:
-                                    print(f"{row["SLONGNAME"]} Consolidated Financial Statement Not available or Not able to fetch.")
+                                    # print(f"{row["SLONGNAME"]} Consolidated Financial Statement Not available or Not able to fetch.")
                                     await send_message_to_telegram(f"{row["SLONGNAME"]} Consolidated Financial Statement Not available or Not able to fetch.")
                             else:
                                 print(f"Failed to generate summary for {file_name}.")
