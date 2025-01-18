@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: result-summarizer
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python result_summarizer.py"
