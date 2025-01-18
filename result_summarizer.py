@@ -248,7 +248,7 @@ def download_pdf(url):
             url = url.replace('nsearchives.nseindia.com', 'archives.nseindia.com')
 
         file_name = url.split("/")[-1]
-        temp_dir = "file"  # Temporary directory
+        temp_dir = "/tmp"  # Temporary directory
         temp_file_path = os.path.join(temp_dir, file_name)
         
         # print(f"Downloading the PDF file from {url}...")
